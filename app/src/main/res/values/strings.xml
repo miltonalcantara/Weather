@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Previsão do tempo</string>
+
+    <!-- Splash Screen -->
+    <string name="logo_do_aplicativo">Logo do aplicativo</string>
+    <string name="desenvolvedora_do_aplicativo">Logo da desenvolvedora do aplicativo</string>
+
+    <!-- Temperatura e Detalhes -->
+    <string name="imagem_cidade">Imagem da cidade</string>
+    <string name="icone_clima">Ícone do clima</string>
+    <string name="place_holder_temperatura">20º</string>
+    <string name="place_holder_cidade_pais">Belem, BR</string>
+    <string name="place_holder_dia_semana">Domingo |</string>
+    <string name="place_holder_data"> 08/01/2016</string>
+
+    <string name="place_holder_temp_max">28.5º</string>
+    <string name="place_holder_temp_min">26.9º</string>
+    <string name="max">Max</string>
+    <string name="min">Min</string>
+    <string name="place_holder_vento">MODERATE BREEZE 7.2MS\nNORTHEAST (40)</string>
+    <string name="wind">Wind</string>
+    <string name="place_holder_nuvem">BROKEN CLOUDS</string>
+    <string name="cloudiness">Cloudiness</string>
+    <string name="place_holder_pressao">1011 HPA</string>
+    <string name="pressure">Pressure</string>
+    <string name="place_holder_umidade">70 %</string>
+    <string name="humidity">Humidity</string>
+    <string name="place_holder_sol_nasce">6:14</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="place_holder_sol_poe">18:26</string>
+    <string name="sunset">Sunset</string>
+
+
+</resources>

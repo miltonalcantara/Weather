@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/viewA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/id_foto_local"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/imagem_cidade"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_belem" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/front_transparente">
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/tb_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@android:color/transparent"
+                        android:minHeight="?attr/actionBarSize"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/id_temperatura"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/place_holder_temperatura"
+                            android:textColor="@android:color/white"
+                            android:textSize="178sp" />
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/id_temperatura"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/id_desenho_clima"
+                                android:layout_width="wrap_content"
+                                android:contentDescription="@string/icone_clima"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_sol" />
+
+                            <TextView
+                                android:id="@+id/id_cidade_pais"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|start"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@+id/id_desenho_clima"
+                                android:text="@string/place_holder_cidade_pais"
+                                android:textColor="@android:color/white"
+                                android:textSize="34sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/id_dia_da_semana"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignStart="@+id/id_cidade_pais"
+                                android:layout_below="@+id/id_cidade_pais"
+                                android:layout_gravity="center|start"
+                                android:text="@string/place_holder_dia_semana"
+                                android:textColor="@android:color/white"
+                                android:textSize="23sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/id_data"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/id_dia_da_semana"
+                                android:layout_below="@+id/id_cidade_pais"
+                                android:layout_gravity="center|start"
+                                android:layout_toEndOf="@+id/id_dia_da_semana"
+                                android:text="@string/place_holder_data"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </FrameLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/id_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/fab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:layout_margin="16dp"
+                        android:clickable="true"
+                        android:src="@drawable/ic_plus"
+                        app:borderWidth="0dp"
+                        app:elevation="4dp"
+                        app:layout_anchorGravity="bottom|right|end" />
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

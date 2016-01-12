@@ -1,0 +1,10 @@
+<resources>
+
+    <color name="PrimaryColor">#3367D6</color>
+    <color name="PrimaryDarkColor">#224daa</color>
+    <color name="AccentColor">#4285F4</color>
+
+    <!-- Cor do fundo da Activity da barra de pesquisa -->
+    <color name="translucent">#80000000</color>
+
+</resources>

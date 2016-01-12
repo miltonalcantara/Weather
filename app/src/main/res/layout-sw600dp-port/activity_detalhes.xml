@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lemonade.teste.previsaodotempo.DetalhesActivity">
+
+    <!-- foto + informações do dia -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/id_foto_local"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/imagem_cidade"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_belem" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/front_transparente">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/tb_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent"
+                    android:minHeight="?attr/actionBarSize"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/id_temperatura"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/place_holder_temperatura"
+                        android:textColor="@android:color/white"
+                        android:textSize="128sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_temperatura"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/id_desenho_clima"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/icone_clima"
+                            android:src="@drawable/ic_sol" />
+
+                        <TextView
+                            android:id="@+id/id_cidade_pais"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/id_desenho_clima"
+                            android:text="@string/place_holder_cidade_pais"
+                            android:textColor="@android:color/white"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/id_dia_da_semana"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/id_cidade_pais"
+                            android:layout_below="@+id/id_cidade_pais"
+                            android:layout_gravity="center|start"
+                            android:text="@string/place_holder_dia_semana"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/id_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/id_dia_da_semana"
+                            android:layout_below="@+id/id_cidade_pais"
+                            android:layout_gravity="center|start"
+                            android:layout_toEndOf="@+id/id_dia_da_semana"
+                            android:text="@string/place_holder_data"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!-- Detalhes -->
+    <LinearLayout
+        android:id="@+id/id_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.4"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/id_temp_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="68dp"
+                    android:layout_marginTop="34dp"
+                    android:text="@string/place_holder_temp_max"
+                    android:textColor="@android:color/white"
+                    android:textSize="52sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_temp_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/id_temp_max"
+                    android:layout_marginEnd="68dp"
+                    android:text="@string/place_holder_temp_min"
+                    android:textColor="@android:color/white"
+                    android:textSize="52sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_legenda_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/id_temp_max"
+                    android:layout_below="@+id/id_temp_max"
+                    android:layout_gravity="center|start"
+                    android:text="@string/max"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_legenda_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/id_temp_min"
+                    android:layout_below="@+id/id_temp_min"
+                    android:layout_gravity="center|start"
+                    android:text="@string/min"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/id_vento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/id_legenda_max"
+                    android:layout_marginStart="68dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/place_holder_vento"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/id_legenda_vento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/id_vento"
+                    android:layout_below="@+id/id_vento"
+                    android:layout_gravity="center|start"
+                    android:text="@string/wind"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_nuvem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/id_legenda_vento"
+                    android:layout_marginStart="68dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/place_holder_nuvem"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/id_legenda_nuvem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/id_vento"
+                    android:layout_below="@+id/id_nuvem"
+                    android:layout_gravity="center|start"
+                    android:text="@string/cloudiness"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_pressao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/id_legenda_nuvem"
+                    android:layout_marginStart="68dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/place_holder_pressao"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
+
+                <TextView
+                    android:id="@+id/id_legenda_pressao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/id_vento"
+                    android:layout_below="@+id/id_pressao"
+                    android:layout_gravity="center|start"
+                    android:text="@string/pressure"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_umidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignStart="@+id/id_temp_min"
+                    android:layout_alignTop="@+id/id_pressao"
+                    android:layout_marginEnd="38dp"
+                    android:text="@string/place_holder_umidade"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
+
+
+                <TextView
+                    android:id="@+id/id_legenda_umidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/id_umidade"
+                    android:layout_below="@+id/id_umidade"
+                    android:layout_gravity="center|start"
+                    android:text="@string/humidity"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_sol_nascer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/id_legenda_pressao"
+                    android:layout_marginStart="68dp"
+                    android:layout_marginTop="34dp"
+                    android:text="@string/place_holder_sol_nasce"
+                    android:textColor="@android:color/white"
+                    android:textSize="24dp" />
+
+                <TextView
+                    android:id="@+id/id_legenda_sol_nascer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/id_sol_nascer"
+                    android:layout_below="@+id/id_sol_nascer"
+                    android:layout_gravity="center|start"
+                    android:layout_marginBottom="34dp"
+                    android:text="@string/sunrise"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_sol_se_por"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignStart="@+id/id_legenda_umidade"
+                    android:layout_alignTop="@+id/id_sol_nascer"
+                    android:layout_marginEnd="38dp"
+                    android:text="@string/place_holder_sol_poe"
+                    android:textColor="@android:color/white"
+                    android:textSize="26sp" />
+
+
+                <TextView
+                    android:id="@+id/id_legenda_sol_se_por"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/id_sol_se_por"
+                    android:layout_below="@+id/id_sol_se_por"
+                    android:layout_gravity="center|start"
+                    android:text="@string/sunset"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

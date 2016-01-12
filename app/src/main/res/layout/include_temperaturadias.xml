@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <ImageView
+        android:id="@+id/img_primeiro_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_nuvem_sol_chuva" />
+
+    <RelativeLayout
+        android:id="@+id/espacamento_max"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_primeiro_dia"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_temp_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="29,7º"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_temp_max"
+            android:layout_alignBottom="@+id/txt_temp_max"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_toEndOf="@+id/txt_temp_max"
+            android:text="max"
+            android:textColor="@android:color/white"
+            android:textSize="7sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/espacamento_min"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/espacamento_max"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/txt_temp_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="29,3º"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txt_temp_min"
+            android:layout_alignBottom="@+id/txt_temp_min"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_toEndOf="@+id/txt_temp_min"
+            android:text="min"
+            android:textColor="@android:color/white"
+            android:textSize="7sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/dia_semana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/espacamento_min"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|start"
+        android:layout_marginTop="4dp"
+        android:text="Quinta"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dia_semana"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|start"
+        android:text="08/01/2016"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>
